@@ -14,4 +14,10 @@ app.get('/status', (req, res) => {
   });
 })
 
-app.listen(process.env.PORT || 3000)
+app.post('/register', (req, res) => {
+  res.send({
+    message: `Hello ${req.body.email}! Your user was regisered! Have fun!`
+  })
+})
+
+app.listen(process.env.PORT || 8082)
